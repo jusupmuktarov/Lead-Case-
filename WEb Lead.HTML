@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Hello dear customer,we glad to see you!</h1>
+    <h1>Please fill the form below</h1>
+</header>
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D06000001SXAv" method="POST">
+    <input type=hidden name="oid" value="00D06000001SXAv">
+    <input type=hidden name="retURL" value="http://">
+
+    <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" type="text" required><br>
+    <label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" type="text" required><br>
+    <label for="phone">Phone</label><input id="phone" maxlength="40" name="phone" type="text" required><br>
+    <label for="email">Email</label><input id="email" maxlength="80" name="email" type="email" required><br>
+    <label for="city">City</label><input id="city" maxlength="40" name="city" type="text" required><br>
+    <label for="state">State/Province</label><input id="state" maxlength="20" name="state" type="text" required><br>
+    <label for="description">Description</label><textarea name="description" required></textarea><br>
+
+    <input type="submit" name="submit">
+</form>
+
+</body>
+</html>
